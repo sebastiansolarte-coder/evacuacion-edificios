@@ -1,0 +1,17 @@
+# Compilación
+out/
+out-pruebas/
+*.class
+evacuacion.jar
+fuentes.txt
+
+# Archivos generados por el programa
+plan_evacuacion.txt
+
+# IDEs
+.idea/
+*.iml
+nbproject/
+.settings/
+.project
+.classpath

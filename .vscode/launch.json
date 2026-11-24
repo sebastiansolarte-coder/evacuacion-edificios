@@ -1,0 +1,8 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    { "type": "java", "name": "Simulador (GUI)", "request": "launch", "mainClass": "evacuacion.App" },
+    { "type": "java", "name": "Simulador (consola)", "request": "launch", "mainClass": "evacuacion.App", "args": "--consola", "console": "integratedTerminal" },
+    { "type": "java", "name": "Pruebas", "request": "launch", "mainClass": "evacuacion.pruebas.PruebasProyecto", "console": "integratedTerminal" }
+  ]
+}
