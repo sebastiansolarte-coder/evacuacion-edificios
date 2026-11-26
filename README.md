@@ -324,5 +324,3 @@ El proyecto se dividió en 4 partes; cada integrante subió la suya al repositor
 | 4 | **Jhoan Alegria** | `vista/`, `App.java`, `test/` | Interfaz gráfica Swing, menú de consola, punto de entrada y pruebas |
 
 **Video (manual de uso, 8 min 33 s):** https://youtu.be/GyRUWstu7GQ
-
-El guion sugerido para el video está en [`docs/GUION_VIDEO.md`](docs/GUION_VIDEO.md).
