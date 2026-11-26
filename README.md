@@ -1,4 +1,4 @@
-# 🏢 Simulador de rutas de evacuación en edificios — Proyecto 4
+# Simulador de rutas de evacuación en edificios — Proyecto 4
 
 Simulador en **Java puro** de la evacuación de un edificio de varios pisos. El edificio se modela
 como un **grafo ponderado** (habitaciones, pasillos, escaleras y salidas; pesos = tiempo en segundos)
@@ -6,33 +6,33 @@ cuyas conexiones pueden **bloquearse por humo o fuego**. El sistema calcula la *
 corta** desde cualquier ubicación hasta la salida de emergencia más cercana (Dijkstra a múltiples
 salidas, comparado con BFS) y **simula el desalojo por turnos** con colas en escaleras y salidas.
 
-> ✅ **Todas las estructuras de datos son implementaciones propias.** El proyecto no importa nada de
+> **Todas las estructuras de datos son implementaciones propias.** El proyecto no importa nada de
 > `java.util` (ni `ArrayList`, `LinkedList`, `Stack`, `Queue`, `HashMap`, `TreeMap`, `PriorityQueue`,
 > `Iterator`, `Scanner`...). Puede comprobarse con `grep -rn "import java.util" src` → sin resultados.
 
-🎥 **Video de presentación y manual de uso:** https://youtu.be/GyRUWstu7GQ
+**Video de presentación y manual de uso:** https://youtu.be/GyRUWstu7GQ
 
 ![Interfaz gráfica](docs/captura-gui.png)
 
 ---
 
-## 📋 Contenido
+## Contenido
 
-1. [Requisitos y ejecución](#-requisitos-y-ejecución)
-2. [Estructuras de datos implementadas](#-estructuras-de-datos-implementadas)
-3. [Algoritmos](#-algoritmos)
-4. [El edificio de ejemplo](#-el-edificio-de-ejemplo)
-5. [Simulación por turnos](#-simulación-por-turnos)
-6. [Manual de uso](#-manual-de-uso)
-7. [Arquitectura y POO](#-arquitectura-y-poo)
-8. [Pruebas](#-pruebas)
-9. [Cumplimiento del enunciado](#-cumplimiento-del-enunciado)
-10. [Uso de IA (Claude)](#-uso-de-ia-claude)
-11. [Equipo y video](#-equipo-y-video)
+1. [Requisitos y ejecución](#requisitos-y-ejecución)
+2. [Estructuras de datos implementadas](#estructuras-de-datos-implementadas)
+3. [Algoritmos](#algoritmos)
+4. [El edificio de ejemplo](#el-edificio-de-ejemplo)
+5. [Simulación por turnos](#simulación-por-turnos)
+6. [Manual de uso](#manual-de-uso)
+7. [Arquitectura y POO](#arquitectura-y-poo)
+8. [Pruebas](#pruebas)
+9. [Cumplimiento del enunciado](#cumplimiento-del-enunciado)
+10. [Uso de IA (Claude)](#uso-de-ia-claude)
+11. [Equipo y video](#equipo-y-video)
 
 ---
 
-## 🚀 Requisitos y ejecución
+## Requisitos y ejecución
 
 - **JDK 17 o superior** (probado con OpenJDK 25). No se necesita Maven, Gradle ni librerías externas.
 
@@ -48,7 +48,7 @@ de fuentes (y `test` como carpeta de pruebas) y ejecutar `evacuacion.App`.
 
 ---
 
-## 🧱 Estructuras de datos implementadas
+## Estructuras de datos implementadas
 
 Todas están en el paquete [`evacuacion.estructuras`](src/evacuacion/estructuras) y son genéricas.
 
@@ -68,7 +68,7 @@ Interfaces de apoyo propias: `Iterador<T>` (en lugar de `java.util.Iterator`), `
 
 ---
 
-## 🧠 Algoritmos
+## Algoritmos
 
 ### Dijkstra a múltiples salidas — `algoritmos/Dijkstra.java`
 - Calcula el **menor tiempo** desde el origen a todos los nodos usando el montículo propio y
@@ -98,7 +98,7 @@ entrega los pasos en el orden correcto.
 
 ### Caso borde: habitación sin ruta
 Si no existe ruta libre (por ejemplo, se bloquea `H301 ↔ PAS3`), el sistema:
-1. Muestra el mensaje “⚠ No existe ruta libre de humo/fuego”.
+1. Muestra el mensaje “No existe ruta libre de humo/fuego”.
 2. **Sugiere una ruta alternativa de emergencia**: Dijkstra permitiendo cruzar conexiones bloqueadas con
    su tiempo multiplicado ×10, es decir, la que atraviesa la menor cantidad de humo (solo con brigada).
 3. Si la ubicación está totalmente aislada, recomienda refugiarse en el lugar y esperar a la brigada.
@@ -113,7 +113,7 @@ El recorrido **inOrden** produce el reporte (menor → mayor) y el **inOrden inv
 
 ---
 
-## 🏗️ El edificio de ejemplo
+## El edificio de ejemplo
 
 `datos/EdificioDemo.java` — 3 pisos, **17 ubicaciones** (≥ 12 pedidas), **22 conexiones**,
 2 escaleras (A y B, con un descanso por piso), 2 salidas (`EXIT_A`, `EXIT_B`), 8 personas y 5 zonas.
@@ -138,7 +138,7 @@ PISO 1   EXIT_A   ESC_A_P1    H101     PAS1     H102    ESC_B_P1   EXIT_B
 
 ---
 
-## ⏱️ Simulación por turnos
+## Simulación por turnos
 
 `servicio/SimuladorEvacuacion.java`. En cada turno:
 
@@ -155,7 +155,7 @@ las 8 personas salen en **10 turnos**.
 
 ---
 
-## 📖 Manual de uso
+## Manual de uso
 
 ### Interfaz gráfica (`./ejecutar.sh`)
 
@@ -203,7 +203,7 @@ comparación BFS, ficha de cada persona, reporte de zonas con el árbol y el est
 
 ---
 
-## 🧩 Arquitectura y POO
+## Arquitectura y POO
 
 ```
 src/evacuacion/
@@ -262,7 +262,7 @@ Principios aplicados:
 
 ---
 
-## 🧪 Pruebas
+## Pruebas
 
 `./probar.sh` ejecuta **49 pruebas** sin dependencias externas (`test/evacuacion/pruebas/PruebasProyecto.java`):
 estructuras (FIFO, LIFO, rehash con 1000 claves, árbol con duplicados/eliminación/rebalanceo, montículo),
@@ -275,7 +275,7 @@ Resultado: 49 aprobadas, 0 fallidas
 
 ---
 
-## ✅ Cumplimiento del enunciado
+## Cumplimiento del enunciado
 
 | Requisito | Dónde |
 |---|---|
@@ -296,7 +296,7 @@ Resultado: 49 aprobadas, 0 fallidas
 
 ---
 
-## 🤖 Uso de IA (Claude)
+## Uso de IA (Claude)
 
 Siguiendo la recomendación del enunciado, se usó **Claude** (Anthropic) como asistente después de la Fase 1:
 
@@ -312,7 +312,7 @@ documentan en los comentarios de cada clase.
 
 ---
 
-## 👥 Equipo y video
+## Equipo y video
 
 El proyecto se dividió en 4 partes; cada integrante subió la suya al repositorio:
 
@@ -325,6 +325,6 @@ El proyecto se dividió en 4 partes; cada integrante subió la suya al repositor
 
 La forma de trabajar con el repositorio está en [`GUIA_COLABORACION.md`](GUIA_COLABORACION.md).
 
-🎥 **Video (manual de uso, 8 min 33 s):** https://youtu.be/GyRUWstu7GQ
+**Video (manual de uso, 8 min 33 s):** https://youtu.be/GyRUWstu7GQ
 
 El guion sugerido para el video está en [`docs/GUION_VIDEO.md`](docs/GUION_VIDEO.md).
