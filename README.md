@@ -10,6 +10,8 @@ salidas, comparado con BFS) y **simula el desalojo por turnos** con colas en esc
 > `java.util` (ni `ArrayList`, `LinkedList`, `Stack`, `Queue`, `HashMap`, `TreeMap`, `PriorityQueue`,
 > `Iterator`, `Scanner`...). Puede comprobarse con `grep -rn "import java.util" src` → sin resultados.
 
+🎥 **Video de presentación y manual de uso:** https://youtu.be/GyRUWstu7GQ
+
 ![Interfaz gráfica](docs/captura-gui.png)
 
 ---
@@ -316,13 +318,13 @@ El proyecto se dividió en 4 partes; cada integrante subió la suya al repositor
 
 | Parte | Integrante | Paquetes / archivos | Contenido |
 |---|---|---|---|
-| 1 | **Sebastián** | `estructuras/`, documentación y scripts | Lista enlazada, cola, pila, tabla hash, árbol binario, montículo, iterador |
-| 2 | **Oscar** | `modelo/`, `algoritmos/` | Grafo, ubicaciones, personas, zonas, rutas, matriz 2D, Dijkstra, BFS |
-| 3 | **Juan** | `servicio/`, `datos/` | `EvacuacionService`, simulación por turnos, zonas, instrucciones, ASCII, exportar .txt, edificio de ejemplo |
-| 4 | **Jhoan** | `vista/`, `App.java`, `test/` | Interfaz gráfica Swing, menú de consola, punto de entrada y pruebas |
+| 1 | **Sebastián Solarte** | `estructuras/`, documentación y scripts | Lista enlazada, cola, pila, tabla hash, árbol binario, montículo, iterador |
+| 2 | **Oscar Achinte** | `modelo/`, `algoritmos/` | Grafo, ubicaciones, personas, zonas, rutas, matriz 2D, Dijkstra, BFS |
+| 3 | **Juan Hipia** | `servicio/`, `datos/` | `EvacuacionService`, simulación por turnos, zonas, instrucciones, ASCII, exportar .txt, edificio de ejemplo |
+| 4 | **Jhoan Alegria** | `vista/`, `App.java`, `test/` | Interfaz gráfica Swing, menú de consola, punto de entrada y pruebas |
 
 La forma de trabajar con el repositorio está en [`GUIA_COLABORACION.md`](GUIA_COLABORACION.md).
 
-🎥 **Video (manual de uso, ≥ 7 min):** _pegar aquí el enlace de YouTube_
+🎥 **Video (manual de uso, 8 min 33 s):** https://youtu.be/GyRUWstu7GQ
 
 El guion sugerido para el video está en [`docs/GUION_VIDEO.md`](docs/GUION_VIDEO.md).
