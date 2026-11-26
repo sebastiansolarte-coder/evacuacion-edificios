@@ -323,8 +323,6 @@ El proyecto se dividió en 4 partes; cada integrante subió la suya al repositor
 | 3 | **Juan Hipia** | `servicio/`, `datos/` | `EvacuacionService`, simulación por turnos, zonas, instrucciones, ASCII, exportar .txt, edificio de ejemplo |
 | 4 | **Jhoan Alegria** | `vista/`, `App.java`, `test/` | Interfaz gráfica Swing, menú de consola, punto de entrada y pruebas |
 
-La forma de trabajar con el repositorio está en [`GUIA_COLABORACION.md`](GUIA_COLABORACION.md).
-
 **Video (manual de uso, 8 min 33 s):** https://youtu.be/GyRUWstu7GQ
 
 El guion sugerido para el video está en [`docs/GUION_VIDEO.md`](docs/GUION_VIDEO.md).
